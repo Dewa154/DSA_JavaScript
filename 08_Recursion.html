@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion</title>
+    <script>
+        // function apple(x){
+        //     console.warn(x);
+        //     if (x<10) {
+        //        apple(x+1)
+        //     }
+        //     // apple();        // Infinite Loop run PC will be hang.
+            
+        // }
+        // let data = 0;
+        // apple(data);
+
+        function factorial(item){
+            if(item ===0){
+                return 1;
+            }
+           return item*factorial(item-1)
+
+        }
+
+        let data = 5;
+        console.warn(factorial(data));
+
+
+        // ++++++++++++++++++++
+        // while loop with array of strings
+
+        // let data = ["batman", "iron man", "spider man", "vision"];
+        // let i = 0;
+        // while(i<data.length){
+        //     console.warn(data[i]);
+        //     i++;
+        // }
+        
+    </script>
+</head>
+<body>
+    <h1>Recursion</h1>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Traverssing</title>
+    <script>
+        let data = [9,45,2,8,45,23,7,78,0,11,41,77]
+
+        // // Traverssing
+        // for(let i=0; i<data.length; i++){
+        //     document.write(`Array ${i} is ${data[i]} <br>`)
+        // }
+
+        // Accessing 
+        // let x = 7;
+        // document.write(data[x]);
+        
+        function getElement(){
+            let el = document.getElementById('element').value
+            let index = parseInt(el)
+            if(!isNaN(index) && index >= 0 && index < data.length){
+                alert(data[el])
+            } else{
+                alert('Please enter valid input')
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="element">
+    <button onclick="getElement()">Get Element</button>
+</body>
+</html>
+

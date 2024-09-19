@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Two in Array</title>
+    <script>
+        let data = [20, 30, 40, 50] 
+        let data2 = [3, 7, 12, 34, 56, 90];
+        let data3 = [];
+
+        for(i=0; i<data.length; i++){
+            data3[i] = data[i];
+        }
+        for(i=0; i<data2.length; i++){
+            data3[i+data.length] = data2[i];
+        }
+        console.warn(data3)
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+24 line
+
+4 space complexity
+
