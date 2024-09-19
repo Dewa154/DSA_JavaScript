@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack with Class Reverse String</title>
+  </head>
+  <body>
+    <h1>Stack with Class Reverse String</h1>
+    <input id="input-field" type="text" placeholder="Enter a value" />
+    <button id="push-btn">Push</button>
+    <button id="pop-btn">Pop</button>
+    <button id="reverse-btn">Reverse String</button>
+    <p id="output"></p>
+
+    <script>
+        class StackReverseString {
+          constructor(size) {
+            this.item = [];
+            this.currentSize = 0;
+            this.maxSize = size;
+          }
+  
+          push(newVal) {
+            if (this.currentSize >= this.maxSize) {
+              alert("stack is full");
+            } else {
+              this.item[this.currentSize] = newVal;
+              this.currentSize++;
+            }
+          }
+  
+          pop() {
+            if (this.currentSize > 0) {
+              this.currentSize--;
+              return this.item.pop();
+            } else {
+              alert("stack is already empty");
+            }
+          }
+  
+          reverseStr(str) {
+            for (let i = 0; i < str.length; i++) {
+              this.push(str[i]);
+            }
+            let reversedStr = "";
+            for (let i = 0; i < str.length; i++) {
+              reversedStr += this.pop();
+            }
+            return reversedStr;
+          }
+        }
+  
+        let stack = new StackReverseString(50);
+        let inputField = document.getElementById("input-field");
+        let pushBtn = document.getElementById("push-btn");
+        let popBtn = document.getElementById("pop-btn");
+        let reverseBtn = document.getElementById("reverse-btn");
+        let output = document.getElementById("output");
+  
+        pushBtn.addEventListener("click", () => {
+          let inputValue = inputField.value;
+          stack.push(inputValue);
+          inputField.value = "";
+          output.textContent = `Stack: ${stack.item.join(", ")}`;
+        });
+  
+        popBtn.addEventListener("click", () => {
+          let poppedValue = stack.pop();
+          output.textContent = `Popped: ${poppedValue}, Stack: ${stack.item.join(
+            ", "
+          )}`;
+        });
+  
+        reverseBtn.addEventListener("click", () => {
+          let inputStr = inputField.value;
+          let reversedStr = stack.reverseStr(inputStr.split(""));
+          output.textContent = `Reversed String: ${reversedStr}`;
+          inputField.value = "";
+        });
+  
+        // Initial test
+        let str = "";
+        str = str.split("");
+        let reversedStr = stack.reverseStr(str);
+        console.log(reversedStr); // Output: "luhar"
+      </script>
+  </body>
+</html>
