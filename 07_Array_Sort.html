@@ -13,12 +13,18 @@
             for (let j = 0; j < data.length; j++) {
                 console.warn(data);
 
-               if(data[j]>data[j+1]){
+               if(data[j]>data[j+1]){           //  Ascending  Order
                 let temp = data[j];
                 data[j] = data[j+1];
                 data[j+1] = temp;
                }
-                
+
+            //    if(data[j]<data[j+1]){           //  Descending  Order
+            //     let temp = data[j];
+            //     data[j] = data[j+1];
+            //     data[j+1] = temp;
+            //    }
+            
             }
         }
         console.warn(data);
