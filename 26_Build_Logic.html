@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Building</title>
+</head>
+<body>
+    <h1>Logic Building</h1>
+    <p>Find Even values from array, Make Double of every element and Find Array length manually.</p>
+
+    <script>
+        let data = [10, 19, 6, 18, 45, 68, 90, 35, 100];
+        let evenArray = [];
+        let count = 0;
+
+        for (let i = 0; i < data.length; i++) {            // Optimize Logic Build
+           if (data[i] % 2 == 0) {
+            evenArray.push(data[i]*2);
+            count++;
+           }
+        }
+
+        // for (let i = 0; i < evenArray.length; i++) {     // Unoptimize logic loop
+        //     evenArray[i] = evenArray[i]*2
+        // }
+
+        // let count = 0;
+        // for (let i = 0; i < evenArray.length; i++) {      // Unoptimize logic loop
+        //     count++; 
+        // }
+
+        console.log(count);
+        console.log(evenArray);
+        
+    </script>
+</body>
+</html>
