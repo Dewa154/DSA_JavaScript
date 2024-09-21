@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Strings are Anagram</title>
+</head>
+<body>
+    <h1>check Strings are Anagram</h1>
+
+    <script>
+        function checkAnagram(str1, str2){
+            let ObjStr1 = {}
+            let ObjStr2 = {}
+
+            if(str1.length !== str2.length){
+                return false;
+            }
+
+            for (const char of str1) {
+                // console.log(char);
+                ObjStr1[char] = (ObjStr1[char] || 0) + 1
+            }
+            // console.log(ObjStr1);
+
+
+            // for (const char of str2) {       // Optional
+            //     // console.log(char);
+            //     ObjStr2[char] = (ObjStr2[char] || 0) + 1
+            // }
+            // console.log(ObjStr2);
+
+
+            for (const char of str2) {
+                // console.log(ObjStr1[char])
+                if (!ObjStr1[char]) {
+                    return false;
+                }
+                    ObjStr1[char]--
+            }
+            return true;
+        }
+
+        console.log(checkAnagram("cato", "octa"));
+        
+    </script>
+</body>
+</html>
