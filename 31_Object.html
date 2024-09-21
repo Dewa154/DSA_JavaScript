@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Data Structure</title>
+</head>
+<body>
+    <h1>Object Data Structure</h1>
+
+    <script>
+        let data = {
+            name: 'anil',
+            age: 20,
+            mail: 'abc@test.com',
+            getName:function(){
+                return this.name;
+            }
+        }
+        data.phone = '1234567890';
+        delete data.name;
+        data.name = "peter"
+
+        // for (const x in data) {
+        //     // console.log(x);
+        //     console.log(data[x]);
+        // }
+
+        // console.log(data);
+        // console.log(data.getName());
+
+        console.log(Object.keys(data));
+        console.log(Object.values(data));
+        console.log(Object.entries(data));
+        
+    </script>
+</body>
+</html>
