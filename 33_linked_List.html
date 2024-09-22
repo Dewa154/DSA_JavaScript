@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked List in JavaScript</title>
+</head>
+<body>
+    <h1>Linked List in JavaScript</h1>
+
+    <script>
+        // OOPs strategy
+
+        class List {
+            constructor(data){
+                this.head = {
+                    value : data,
+                    next : null
+                };
+                this.tail = this.head;
+                this.size = 1
+            }
+            appendNode(nodeData){
+                let newNode = {
+                    value : nodeData,
+                    next : null
+                };
+                this.tail.next = newNode;
+                this.tail = newNode;
+                this.size += 1;
+            }
+        }
+
+        let list = new List(200);
+        list.appendNode(300)
+        list.appendNode(400)
+        list.appendNode(500)
+        list.appendNode(600)
+        list.appendNode(700)
+        console.log(list);
+
+
+
+        /* This is not a part of Linked list , only for understand
+
+        let x = {name: "anil"};
+        let y = x;
+        y.name = "peter";
+
+        console.log(x);
+        */
+
+
+    </script>
+</body>
+</html>
